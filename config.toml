@@ -17,8 +17,8 @@ disqusShortname = 'unnerved'
     pre = "pen-tool"
     url = "/posts/"
     weight = 2
-  # [[menu.main]]
-  #  name = "Categorie"
-  #  pre = "tag"
-  #  url = "/tags/"
-  #  weight = 3
+   [[menu.main]]
+    name = "🗃 Categorie"
+    pre = "tag"
+    url = "/tags/"
+    weight = 3
