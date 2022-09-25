@@ -1,10 +1,15 @@
 {{ define "main" }}
-<h1 class="title">{{ .Title }}</h1>
-<h2 class="subtitle">{{ .Page.Params.subtitle }}</h2>
+<section class="here">
+    <div class="here-body">
+        <p class="title">{{ .Title }}</p>
+        <p class="subtitle">{{ .Page.Params.subtitle }}</p>
+    </div>
+</section>
+<br>
 <div class="content is-small">{{ partial "metadata.html" . }}</div>
 <hr>
 <div class="single-post">
     <p>{{ .Content }}</p>
 </div>
-{{ partial "sidebar.html" . }}
+{{ template "_internal/disqus.html" . }}
 {{ end }}
