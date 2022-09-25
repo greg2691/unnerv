@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{ range first 3 .Site.RegularPages }}
-  <div class="card" onclick="window.location='{{ .RelPermalink }}'">
+  <div class="card" onclick="window.location='{{ .RelPermalink }}';">
     <div class="card-content">
       <div class="media">
         {{if isset .Params "featured_image" }}

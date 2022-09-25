@@ -11,5 +11,7 @@
 <div class="single-post">
     <p>{{ .Content }}</p>
 </div>
-{{ template "_internal/disqus.html" . }}
+<script defer src="https://cdn.commento.io/js/commento.js"></script>
+<div id="commento"></div>
+<!-- {{ template "_internal/disqus.html" . }} -->
 {{ end }}
