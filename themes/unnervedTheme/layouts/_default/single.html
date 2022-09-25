@@ -3,6 +3,8 @@
 <h2 class="subtitle">{{ .Page.Params.subtitle }}</h2>
 <div class="content is-small">{{ partial "metadata.html" . }}</div>
 <hr>
-<p>{{ .Content }}</p>
+<div class="single-post">
+    <p>{{ .Content }}</p>
+</div>
 {{ partial "sidebar.html" . }}
 {{ end }}

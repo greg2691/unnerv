@@ -1,6 +1,10 @@
-.navbar {
-  border-bottom: 2px solid #7F00FF;
+body {
+  background-color: #fafafa;
 }
+.single-post p {
+  margin-bottom: 10px;
+}
+
 h1.title a {
   font-color: black;
 }

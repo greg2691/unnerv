@@ -1,40 +1,27 @@
 {{ define "main" }}
 
-  {{ range first 3 .Site.RegularPages }}
-  <article class="media">
-    {{if isset .Params "featured_image" }}
-      <figure class="media-left">
-        <p class="image is-128x128">
-          <img src="{{ index .Params "featured_image" }}">
-        </p>
-      </figure>
-    {{ end }}
-    <div class="media-content">
-      <div class="content">
-        <p>
-          <strong>{{ .Title }}</strong> <small>//</small> <small>{{ partial "metadata.html" . }}</small>
-          <br>
-          {{slicestr .Summary 0 350}} <button class="button is-small"><a href="{{ .RelPermalink }}">Continua</a></button>
-        </p>
-      </div>
-      <nav class="level is-mobile">
-        <div class="level-left">
-          <a class="level-item">
-            <span class="icon is-small"><i class="fas fa-reply"></i></span>
-          </a>
-          <a class="level-item">
-            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-          </a>
-          <a class="level-item">
-            <span class="icon is-small"><i class="fas fa-heart"></i></span>
-          </a>
+{{ range first 3 .Site.RegularPages }}
+  <div class="card">
+    <div class="card-content">
+      <div class="media">
+        {{if isset .Params "featured_image" }}
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="{{ index .Params "featured_image" }}" alt="Placeholder image">
+            </figure>
+          </div>
+        {{ end }}
+        <div class="media-content">
+          <strong>{{ .Title }}</strong> // <time datetime="2016-1-1">{{ partial "metadata.html" . }}</time>
+          <br>{{slicestr .Summary 0 100}} <a href="{{ .RelPermalink }}">Continua</a>.
         </div>
-      </nav>
+      </div>
     </div>
-  </article>
-  {{end}}
+  </div>
+  <br>
+{{end}}
 
-  {{ partial "sidebar.html" . }}
+
 
 {{ end }}
 
