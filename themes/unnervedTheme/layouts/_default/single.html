@@ -3,6 +3,7 @@
     <div class="here-body">
         <p class="title">{{ .Title }}</p>
         <p class="subtitle">{{ .Page.Params.subtitle }}</p>
+        <img src="{{ index .Params "featured_image" }}" alt="Placeholder image">
     </div>
 </section>
 <br>

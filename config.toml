@@ -22,3 +22,9 @@ disqusShortname = 'unnerved'
     pre = "tag"
     url = "/tags/"
     weight = 3
+    [[menu.main]]
+    name = "Pagina"
+    pre = "pagina"
+    url = "/prova/"
+    weight = 4
+

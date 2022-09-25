@@ -1,7 +1,7 @@
 {{ $dateTime := .PublishDate.Format "02-01-2006" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "2 January, 2006" }}
-<b>Pubblicato il:</b> <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time> - 
-<b>Categorie:</b> {{ with .Params.tags }}
+<i class="calendar-16" data-feather="calendar"></i><b> Pubblicato il:</b> <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time> - 
+<i class="tag-16" data-feather="book"></i><b> Categoria:</b> {{ with .Params.tags }}
 {{ range . }}
 {{ $href := print (absURL "tags/") (urlize .) }}
 <a href="{{ $href }}">{{ . }}</a>, 

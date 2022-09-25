@@ -8,3 +8,21 @@ body {
 h1.title a {
   font-color: black;
 }
+
+.calendar-16-2,
+.tag-16-2,
+.calendar-16,
+.tag-16 {
+  width: 16px;
+  height: 16px;
+  }
+
+.calendar-16,
+.tag-16 {
+  vertical-align: top;
+}
+
+.calendar-16-2,
+.tag-16-2 {
+  vertical-align: middle;
+}
